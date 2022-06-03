@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 // Fonte : https://pt.stackoverflow.com/questions/235272/como-converter-uma-string-em-booleano
 const stringBool = process.env.UPSIDEDOWN_MODE;
-const parseBool = stringBool.toLocaleLowerCase() === 'true';
+const parseBool = stringBool.toLowerCase() === 'true';
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
